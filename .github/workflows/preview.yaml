@@ -14,6 +14,7 @@ jobs:
       uses: okteto/login@master
       with:
         token: ${{ secrets.OKTETO_TOKEN }}
+        url: ${{ secrets.OKTETO_URL }}
 
     - name: Create namespace
       uses: okteto/create-namespace@master
@@ -32,4 +33,4 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        message: "Preview environment available at https://movies-pr-${{ github.event.number }}-cindylopez.cloud.okteto.net"
+        message: "Preview environment available at https://movies-pr-${{ github.event.number }}-ramiro.dev.okteto.net"
